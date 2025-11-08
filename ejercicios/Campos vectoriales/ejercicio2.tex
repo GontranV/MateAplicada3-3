@@ -1,0 +1,17 @@
+Un granjero que pesa $150 \text{ lb}$ sube un saco de grano que pesa $20 \text{ lb}$ a lo largo de una escalera helicoidal alrededor de un silo cilíndrico de radio $25 \text{ ft}$. Conforme el granjero sube, el grano se sale del saco a razón de $1 \text{ lb}$ por cada $10 \text{ ft}$ de ascenso. ¿Cuánto trabajo realiza el granjero si asciende verticalmente $60 \text{ ft}$ en exactamente cuatro vueltas de la hélice? (\textbf{Sugerencia}: describa como un campo vectorial la fuerza ejercida por el granjero para levantar su propio peso más el peso del saco en cada punto de su trayectoria).\\
+
+La componente vertical de la fuerza es:
+\[
+F_z = 150 + \left(20 - \frac{z}{10}\right) = 170 - \frac{z}{10} \quad \text{lb}.
+\]
+
+El trabajo realizado es la integral de \(F_z\) con respecto a \(z\) desde 0 hasta 60 ft:
+\[
+W = \int_{0}^{60} \left(170 - \frac{z}{10}\right) dz.
+\]
+
+\[
+W = \left[ 170z - \frac{z^2}{20} \right]_{0}^{60} = \left(170 \cdot 60 - \frac{60^2}{20}\right) - (0) = 10200 - \frac{3600}{20} = 10200 - 180 = 10020 \quad \text{lb-ft}.
+\]
+
+El trabajo del granjero es \(10020\) lb-ft.

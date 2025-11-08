@@ -1,0 +1,40 @@
+Mostrar que la masa $M$ de un alambre de grosor desdeñable cuya forma es la de la curva parametrizada por $x = 2t,\, y = \ln t,\,z = 4\sqrt{t}$ para $1 \le t \le 4$ y cuya densidad $\delta(x, y, z)$ es proporcional a la distancia del punto $(x, y, z)$ al plano $xy$ con constante de proporcionalidad $k$ es
+$$M = \frac{136k}{3} \text{ unidades de masa.}$$
+
+La masa $M$ de un alambre de grosor desdeñable que ocupa una curva $C$ con función de densidad $\delta(x,y,z)$ se calcula mediante la fórmula de la integral de línea
+$$\int_C \delta(x,y,z)ds$$
+
+Tenemos que $\delta(x,y,z)$ es proporcional a la distancia del punto $(x,y,z)$ al plano $xy$ con una constante de proporcionalidad $k$.
+
+La distancia de un punto $(x,y,z)$ al plano $xy$ es simplementen $z$ pues es siempre positiva $(z\ge 4)$. Entonces $\delta(x,y,z) = kz$
+
+$$\delta(z(t)) = k \left(4\sqrt{t}\right) = 4k t^{1/2}$$
+
+Calculando la diferencial de arco $\displaystyle ds = \sqrt{\left( \frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2}dt$
+
+Calculando al derivada de cada componete tenemos que: 
+
+\begin{align*}
+    \frac{dx}{dt} = \frac{d}{dt}(2t) = 2, \quad \frac{dy}{dt} = \frac{d}{dt}(\ln t) = \frac{1}{t}, \quad \frac{dz}{dt} = \frac{d}{dt}(4\sqrt{t}) = \frac{2}{\sqrt{t}}
+\end{align*}
+
+Sustituyendo en la fórmula de $ds$ tenemos que:
+
+\begin{align*}
+    ds &= \sqrt{(2)^2 + \left(\frac{1}{t}\right)^2 + \left(\frac{2}{\sqrt{t}}\right)^2} dt \\
+    &= \sqrt{4 + \frac{1}{t^2} + \frac{4}{t}} dt \\
+    &= \sqrt{\frac{4t^2 + 4t + 1}{t^2}} dt \\
+    &= \frac{\sqrt{(2t + 1)^2}}{t} dt \\
+    &= \frac{2t + 1}{t} dt
+\end{align*}
+
+Entonces la masa $M$ se calcula como:
+
+\begin{align*}
+    M &= \int_C \delta(x,y,z) ds = \int_1^4 4k t^{1/2} \cdot \frac{2t + 1}{t} dt = 4k \int_1^4 t^{1/2} \left(2 + \frac{1}{t}\right) dt \\
+    &= 4k \int_1^4 \left(2t^{1/2} + t^{-1/2}\right) dt = 4k \left[ \frac{4}{3} t^{3/2} + 2 t^{1/2} \right]_1^4 = 4k \left( \left[ \frac{4}{3} (4)^{3/2} + 2 (4)^{1/2} \right] - \left[ \frac{4}{3} (1)^{3/2} + 2 (1)^{1/2} \right] \right) \\
+    &= 4k \left( \left[ \frac{4}{3} (8) + 2 (2) \right] - \left[ \frac{4}{3} (1) + 2 (1) \right] \right) = 4k \left( \left[ \frac{32}{3} + 4 \right] - \left[ \frac{4}{3} + 2 \right] \right) \\
+    &= 4k \left( \frac{32}{3} + 4 - \frac{4}{3} - 2 \right) \\
+    &= 4k \left( \frac{28}{3} + 2 \right) \\
+    &= 4k \cdot \frac{34}{3} = \frac{136k}{3}
+\end{align*}    

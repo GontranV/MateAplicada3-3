@@ -1,0 +1,40 @@
+Use el resultado adecuado del primer problema para demostrar que si $\mathbf{F}$ es un campo vectorial de la forma $\mathbf{F}(r) = f(\|\mathbf{r}\|)\,\mathbf{r}$ y su divergencia $\text{div}\,\mathbf{F} = 0$, entonces $\mathbf{F}$ es un campo cuadrado-inverso. (Sugerencia: sea $r = \|\mathbf{r}\|$, multiplique por $r^2$ ambos miembros de la ecuación y resuelva la ecuación diferencial resultante para demostrar que $f(r)$ es de tipo cuadrado-inverso).
+
+Partimos de que $\text{div}\,\mathbf{F} =0$
+
+Entonces, por el primer ejercicio, la ecuación (6) tenemos que $3f(r) + rf'(r)= 0$
+
+Multiplicando por $r^2$ ambos miembros de la ecuación, obtenemos:
+\begin{align*}
+    r^2 \cdot\left[3f(r) + r f'(r)\right] & = 0 \\
+    r^2 \cdot 3f(r) + r^3 f'(r)           & = 0 \\
+    3r^2 f(r) + r^3 f'(r)                 & = 0
+\end{align*}
+
+Notemos que la expresión del lado izquierdo es la derivada del producto $r^3 f(r)$, es decir:
+\begin{align*}
+    \frac{d}{dr}\left[r^3 f(r)\right] & =\left(\frac{d}{dr}r^3\right)f(r) + r^3 \left(\frac{d}{dr}f(r)\right)       \\
+    \frac{d}{dr}\left[r^3 f(r)\right] & =3r^2 f(r) + r^3 f'(r)\\
+    \text{Esto implica que }\frac{d}{dr}\left[r^3 f(r)\right] & = 0
+\end{align*}
+
+Por el Teorema Fundamental del Cáculo, la integral de la derivada es igual a la función más una constante, es decir:
+\begin{align*}
+    \int \frac{d}{dr}\left[r^3 f(r)\right] dr & = \int 0 \, dr \\
+    r^3 f(r) & = C
+\end{align*}
+
+Finalmente, despejando $f(r)$, obtenemos:
+\begin{align*}
+    f(r) & = \frac{C}{r^3}
+\end{align*}
+
+Sustituyendo $f(r)$ en la expresión de $\mathbf{F}(r)$, tenemos:
+\begin{align*}
+    \mathbf{F}(r) & = f(\|\mathbf{r}\|)\,\mathbf{r} \\
+    \mathbf{F}(r) & = \frac{C}{\|\mathbf{r}\|^3}\,\mathbf{r}\\
+\end{align*}
+
+
+
+Por lo tanto, hemos demostrado que si la divergencia de $\mathbf{F}$ es cero, entonces $\mathbf{F}$ es un campo cuadrado-inverso que por definición es de la forma $\mathbf{F}(r) = \frac{C}{\|\mathbf{r}\|^3}\,\mathbf{r}$

@@ -1,0 +1,47 @@
+ Sea $\mathbf{F}(x, y) = \frac{y}{x^2 + y^2} \mathbf{i} - \frac{x}{x^2 + y^2} \mathbf{j}$.
+    \begin{enumerate}
+        \item[(a)] Demostrar que si $C_1$ es el arco circular superior del círculo $x^2 + y^2 = 1$ que va de $P_1 = (1, 0)$ a $P_2 = (-1, 0)$ y $C_2$ es el arco inferior del mismo círculo que va de $P_1$ a $P_2$, entonces:
+        $$\int_{C_1} \mathbf{F} \cdot d\mathbf{r} \ne \int_{C_2} \mathbf{F} \cdot d\mathbf{r}$$
+        \text{Para $C_1$ (arco superior):}
+        \begin{align*}
+        \text{Parametrización: } & x = \cos t, \quad y = \sin t, \quad t \in [0, \pi] \\
+        d\mathbf{r} & = (-\sin t, \cos t) dt \\
+        \mathbf{F} & = \frac{\sin t}{\cos^2 t + \sin^2 t} \mathbf{i} - \frac{\cos t}{\cos^2 t + \sin^2 t} \mathbf{j} = \sin t \, \mathbf{i} - \cos t \, \mathbf{j} \\
+        \mathbf{F} \cdot d\mathbf{r} & = (\sin t)(-\sin t) + (-\cos t)(\cos t) dt \\
+        & = -\sin^2 t - \cos^2 t dt = -(\sin^2 t + \cos^2 t) dt = -dt \\
+        \int_{C_1} \mathbf{F} \cdot d\mathbf{r} & = \int_{0}^{\pi} -dt = -[t]_{0}^{\pi} = -\pi
+        \end{align*}
+        
+        \text{Para $C_2$ (arco inferior):}
+        \begin{align*}
+        \text{Parametrización: } & x = \cos t, \quad y = \sin t, \quad t \in [0, -\pi] \\
+        d\mathbf{r} & = (-\sin t, \cos t) dt \\
+        \mathbf{F} & = \sin t \, \mathbf{i} - \cos t \, \mathbf{j} \\
+        \mathbf{F} \cdot d\mathbf{r} & = -\sin^2 t - \cos^2 t dt = -dt \\
+        \int_{C_2} \mathbf{F} \cdot d\mathbf{r} & = \int_{0}^{-\pi} -dt = -[t]_{0}^{-\pi} = -(-\pi - 0) = \pi 
+        \end{align*}
+        
+        Por lo tanto, $\int_{C_1} \mathbf{F} \cdot d\mathbf{r} = -\pi \neq \pi = \int_{C_2} \mathbf{F} \cdot d\mathbf{r}$. \\
+
+        
+        \item[(b)] Probar que si $f(x, y) = \frac{y}{x^2 + y^2}$ y $g(x, y) = -\frac{x}{x^2 + y^2}$, entonces:
+        $$\frac{\partial g}{\partial x} = \frac{\partial f}{\partial y}$$
+
+        
+           
+        \[\frac{\partial f}{\partial y}  = \frac{\partial}{\partial y}\left(\frac{y}{x^2 + y^2}\right) \]
+           \[  = \frac{1 \cdot (x^2 + y^2) - y \cdot 2y}{(x^2 + y^2)^2} \]
+           \[  = \frac{x^2 + y^2 - 2y^2}{(x^2 + y^2)^2} = \frac{x^2 - y^2}{(x^2 + y^2)^2} \]
+            
+           \[ \frac{\partial g}{\partial x}  = \frac{\partial}{\partial x}\left(-\frac{x}{x^2 + y^2}\right) \]
+            \[ = -\frac{1 \cdot (x^2 + y^2) - x \cdot 2x}{(x^2 + y^2)^2} \]
+            \[ = -\frac{x^2 + y^2 - 2x^2}{(x^2 + y^2)^2} = -\frac{-x^2 + y^2}{(x^2 + y^2)^2} = \frac{x^2 - y^2}{(x^2 + y^2)^2}\]
+            
+            
+            Por lo tanto, \[\frac{\partial g}{\partial x} = \frac{\partial f}{\partial y}\].
+
+
+        \item[(c)] Explique por qué los resultados de los dos incisos anteriores no contradicen el \textbf{criterio de conservatividad}.\\
+        \item[] Aunque se cumple que $\dfrac{\partial g}{\partial x} = \dfrac{\partial f}{\partial y}$, esto no implica que $F$ sea conservativo, pues el \text{criterio de conservatividad} solo es válido en dominios simplemente conexos. En este caso, $F$ no está definida en el origen, por lo que su dominio $R^2 \setminus \{(0,0)\}$ no es simplemente conexo. Como consecuencia, la integral de línea de $F$ depende de la trayectoria, tal como se comprobó en el inciso (a).
+
+    \end{enumerate}

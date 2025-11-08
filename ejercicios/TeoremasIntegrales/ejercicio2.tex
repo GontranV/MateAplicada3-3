@@ -1,0 +1,30 @@
+Sea $\mathbf{F} = \nabla \phi$, donde $\phi(x,y) = \sin (x - 2y)$. Hallar sendas curvas planas $C_1$ y $C_2$ tales que
+\begin{enumerate}
+    \item[(a)] $\int_{C_1} \mathbf{F} \cdot d\mathbf{r} = 0$
+    \item[(b)] $\int_{C_2} \mathbf{F} \cdot d\mathbf{r} = 1$
+\end{enumerate}
+
+El Teorema Fundamental de Integrales de Línea establece que si $\mathbf{F} = \nabla \phi$ es un campo conservativo en algunda región abierta $D\subset \mathbb{R}^2$ que contiene los puntos $(x_0,y_0)$ y $(x_1,y_1)$ y que $f(x,y)$ y $g(x,y)$ son continuas en $D$ y $C$ cualquier curva parametrizada suave por pedazos que empieze en $(x_0,y_0)$ y termine en $(x_1,y_1)$ y esté contenida en la región $D$, entonces:
+$$\int_C\mathbf{F}(x,y)\cdot d\mathbf{r} = \phi(x_1,y_1) - \phi(x_0,y_0)$$.
+
+(a) Para que la integral de línea sea cero, necesitamos que $\phi(x_1,y_1) = \phi(x_0,y_0)$. Podemos elegir cualquier par de puntos que satisfagan esta condición. Por ejemplo, podemos elegir los puntos $(0,0)$ y $(2\pi, \pi)$, ya que:
+$$\phi(0,0) = \sin(0 - 0) = 0$$
+$$\phi(2\pi, \pi) = \sin(2\pi - 2\pi) = \sin(0) = 0$$
+Por lo tanto, cualquier curva $C_1$ que conecte estos dos puntos servirá. Una posible elección es la línea recta parametrizada por:
+$$\mathbf{r}_1(t) = (2\pi t, \pi t), \quad t \in [0,1]$$.
+
+Otra posible elección son las curvas tales que empiezan y terminan en el mismo punto, es decir curvas cerradas, por ejemplo la curva que empieza y termina en el punto $(0,0)$.
+
+entonces $\displaystyle \int_{C_1} \mathbf{F} \cdot d\mathbf{r} = \phi(0,0) - \phi(0,0) = 0$.
+
+(b) Para que la integral de línea sea igual a 1, necesitamos encontrar puntos $(x_0,y_0)$ y $(x_1,y_1)$ tales que $\phi(x_1,y_1) - \phi(x_0,y_0) = 1$. 
+
+Como $\phi(x,y) = \sin(x - 2y)$, la condición anterior se cumple si y solo si el potencial en el punto final es 1 unidad mayor que en el punto inicial pues el rango de los valores de $\phi$ es $\left[-1,1\right]$. Entonces debe pasar que $\phi(x_0,y_0) = 0$ y $\phi(x_1,y_1) = 1$.
+
+Sea $x-2y = 0$, ya vimos que para $(x_0,y,0) = (0,0)$, $\phi(0,0) = 0$. Ahora buscamos un punto $(x_1,y_1)$ tal que $x_1 - 2y_1 = \frac{\pi}{2}$, por ejemplo $(\frac{\pi}{2},0)$, ya que:
+$$\phi\left(\frac{\pi}{2},0\right) = \sin\left(\frac{\pi}{2} - 0\right) = \sin\left(\frac{\pi}{2}\right) = 1$$.
+
+Podemos concluir que cualquier curva suave por pedazos $C_2$ que conecte los puntos $(0,0)$ y $\left(\frac{\pi}{2},0\right)$ servirá. Una posible elección es la línea recta parametrizada por:
+$$\mathbf{r}_2(t) = \left(\frac{\pi}{2} t, 0\right), \quad t \in [0,1]$$.
+
+Entonces, $\displaystyle \int_{C_2} \mathbf{F} \cdot d\mathbf{r} = \phi\left(\frac{\pi}{2},0\right) - \phi(0,0) = 1 - 0 = 1$.

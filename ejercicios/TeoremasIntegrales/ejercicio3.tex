@@ -1,0 +1,44 @@
+Recuerde que si $\phi = -\frac{c}{\|\mathbf{r}\|}$ y $\mathbf{F} = \frac{c}{\|\mathbf{r}\|^3} \mathbf{r}$ es un campo cuadrado-inverso, entonces $\nabla \phi = \mathbf{F}$.
+
+\begin{enumerate}
+    \item[(a)] Sean $P_1, P_2 \in \mathbb{R}^3$ dos puntos distintos del origen cuyas distancias a éste son, respectivamente, $d_1$ y $d_2$. Mostrar que el trabajo $W$ que hace $\mathbf{F}$ para desplazar una partícula desde $P_1$ hasta $P_2$ es
+        $$W = c \left( \frac{1}{d_1} - \frac{1}{d_2} \right).$$
+
+        Para obtener $W$ necesitamos, W = $\displaystyle\int_C\mathbf{F}d\mathbf{r}$ pero dado que tenemos $\phi$ tal que $\nabla \phi = \mathbf{F}$, podemos usar el Teorema Fundamental de las integrales de línea: \[\int_C \mathbf{F}d\mathbf{r} = \phi(x_1,y_1) - \phi(x_0,y_0)\]
+
+        Así $W = \phi(x_1,y_1) - \phi(x_0,y_0)$, tomaremos $(x_0,y_0 = P_1 \text{ y } (x_1,y_1) = P_2$
+
+        Así, tenemos:\[W = -\frac{c}{||\mathbf{r}_2||}-\left(-\frac{c}{||\mathbf{r}_1||}\right)\]
+
+        Ahora para el valor de $||\mathbf{r}_1||$ y $||\mathbf{r}_2||$, dado que son radio-vectores, estas magnitudes son la distancia del origen al punto, que nos son dadas en el problema como $d_1$ y $d_2$ respectivamente.
+
+        Así
+        \begin{align*}
+            W & = -\frac{c}{d_2} - \left(-\frac{c}{d_1} \right) \\
+              & = -\frac{c}{d_2} + \frac{c}{d_1}                \\
+              & = c\left(\frac{1}{d_1} - \frac{1}{d_2}\right)   \\
+            W & = c\left(\frac{1}{d_1} - \frac{1}{d_2}\right)
+        \end{align*}
+
+    \item[(b)] Considere la acción del campo gravitacional del Sol sobre la Tierra:
+        $$\mathbf{F} = -G \frac{mM}{\|\mathbf{r}\|^3} \mathbf{r}$$
+        donde $G = 6.67 \times 10^{-11} \frac{\text{N} \cdot \text{m}^2}{\text{kg}^2}$, $m = 5.97 \times 10^{24} \text{ kg}$ y $M = 1.99 \times 10^{30} \text{ kg}$. Use el resultado del inciso anterior para calcular el trabajo que hace $\mathbf{F}$ para desplazar a la Tierra desde su afelio ($a \text{ } 1.52 \times 10^8 \text{ km}$ de distancia del Sol) hasta su perihelio ($a \text{ } 1.47 \times 10^8 \text{ km}$ de distancia del Sol).
+
+        Notemos que el sol es el oringe.
+
+        Usaremos \[W = c\left(\frac{1}{d_1} - \frac{1}{d_2}\right)\]
+        con
+        \begin{align*}
+            c & = \left(-1\right)\left(6.67 \times 10^{-11}\right)\left(5.97 \times 10^{24}\right)\left(1.99 \times 10^{30}\right) = -7.92729766 \times 10^{44} \text{ N} \cdot \text{m}^2 \\
+            d_1 & = 1.52 \times 10^8 \text{ km} = 1.52 \times 10^{11} \text{ m}                                                                                 \\
+            d_2 & = 1.47 \times 10^8 \text{ km} = 1.47 \times 10^{11} \text{ m}
+        \end{align*}
+
+        Así resulta
+        \begin{align*}
+            W &= -7.92729766 \times 10^{44} \left(\frac{1}{1.52 \times 10^{11}} - \frac{1}{1.47 \times 10^{11}}\right) \\
+              & = -7.92729766 \times 10^{44} \left(6.57894737 \times 10^{-12} - 6.80272109 \times 10^{-12}\right)        \\
+              & = -7.92729766 \times 10^{44} \left(-2.23873719 \times 10^{-13}\right)                                   \\
+            W & = 1.77437314 \times 10^{32} \text{ J}
+        \end{align*}
+\end{enumerate}

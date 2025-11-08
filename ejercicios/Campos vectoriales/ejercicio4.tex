@@ -1,0 +1,47 @@
+Considere la lata cilíndrica cortada que se muestra en la figura 15.
+\begin{enumerate}
+  \item Dé un argumento geométrico simple para explicar por qué el área $A$ de la pared lateral de la lata es $A = 4\pi \text{ unidades de área}$.
+  \item Describa el área de la pared lateral de la lata mediante una integral de línea.
+  \item Use la integral de línea para corroborar que $A = 4\pi \text{ unidades de área}$.
+\end{enumerate}
+
+\begin{center}
+  \includegraphics[height = 0.14\textheight]{recursos/image.png}\par
+\end{center}
+\textbf{Figura 15:} La curva sinusoidal $z(t) = 2 + 0.5 \sin 3t$ corta la pared lateral del cilindro $x^2 + y^2 = 1$.
+
+(a) Vemos que la base de la lata es el círculo unitario $x^2 + y^2 = 1$ en el plano $xy$ cuyo perímetro es $P = 2 \pi r = 2 \pi (1) = 2 \pi$ unidades de longitud.
+La altura de la lata varía según la función sinusoidal $z(t) = 2 + 0.5 \sin 3t$ que oscila entre $1.5$ y $2.5$ unidades de longitud.
+
+Podemos decir que por simetría, la altura promedio de la pared lateral de la lata es el valor medio de la función sinusoidal en un período completo. En este caso, el intervalo es $0\le t\le 2\pi$ dond en $\sin3t$ completa $3$ ciclos completos.
+
+Por lo tanto, la altura promedio de la pared lateral de la lata es $2$
+
+Finalmente, el área de la pared lateral de la lata es el producto del perímetro de la base por la altura promedio de la pared lateral. $$A=2\pi\cdot2=4\pi$$
+
+(b) El área de la pared lateral de la lata es una integral de línea de un campo escalar respecto a la longitud de arco. La función escalar $f(x,y,z)$ es la proyección de la base de la lata en el plano $xy$ que es el círculo unitario.
+
+El círculo $x^2+y^2=1$ en el plano $xy$ se parametriza como: $$\mathbf{r}(t) = \langle \cos t, \sin t \rangle, \quad 0 \le t \le 2\pi$$
+
+Para cada altura $z = z(t) = 2 + 0.5 \sin 3t$, la función escalar es $f(x,y,z) = z(t)$.
+Entonces, si $f(x,y)\ge 0$, la integral de linea que describe el área de la pared lateral de la lata es:
+$$A = \oint_C f(x,y) ds = \int_0^{2\pi} (2 + 0.5 \sin 3t)  ds$$
+
+(c) Calculamos la diferencial de arco $ds$ como:
+\begin{align*}
+  ds &= \sqrt{\left(\frac{dx}{dt}\right)^2 + \left(\frac{dy}{dt}\right)^2} dt \\
+  &= \sqrt{(-\sin t)^2 + (\cos t)^2} dt \\
+  &= \sqrt{\sin^2 t + \cos^2 t} dt \\
+  &= \sqrt{1} dt = dt
+\end{align*}
+
+Sustituyendo en la integral de línea tenemos:
+\begin{align*}
+  A &= \int_0^{2\pi} (2 + 0.5 \sin 3t) dt \\
+  &= \left[ 2t - \frac{0.5}{3} \cos 3t \right]_0^{2\pi} \\
+  &= \left( 2(2\pi) - \frac{0.5}{3} \cos(6\pi) \right) - \left( 2(0) - \frac{0.5}{3} \cos(0) \right) \\
+  &= \left( 4\pi - \frac{0.5}{3}(1) \right) - \left( 0 - \frac{0.5}{3}(1) \right) \\
+  &= 4\pi - \frac{0.5}{3} + \frac{0.5}{3} = 4\pi
+\end{align*}
+
+Esto confirma que el área de la pared lateral de la lata es $A = 4\pi$ unidades de área.

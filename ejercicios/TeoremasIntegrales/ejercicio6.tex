@@ -1,0 +1,40 @@
+ Sea $\mathbf{F}(x, y) = (e^{-x} + 3y) \mathbf{i} + x \mathbf{j}$ y sea $C$ la frontera de la región del plano dentro del círculo $x^2 + y^2 = 16$ y fuera del círculo $x^2 - 2x + y^2 = 3$. Usar el \textbf{teorema de Green generalizado} para calcular $\oint_C \mathbf{F} \cdot d\mathbf{r}$.
+
+
+El campo vectorial es de la forma $\mathbf{F}(x, y) = f(x, y) \mathbf{i} + g(x, y) \mathbf{j}$:
+$$f(x, y) = e^{-x} + 3y$$
+$$g(x, y) = x$$
+
+La curva $C$ es la frontera de la región $D$ definida por:
+
+La frontera exterior $C_1$ dentro del círculo $x^2 + y^2 = 16$ es un círculo centrado en $(0, 0)$ con radio $r=4$.
+
+La frontera interior $C_2$ fuera del círculo $x^2 - 2x + y^2 = 3$, donde, al completar el cuadrado tenemos la ecuación $(x - 1)^2 + y^2 = 4$. Este es un círculo centrado en $(1, 0)$ con radio $r=2$.
+
+La región $D$ es, por lo tanto, el área entre los círculos concentricos $C_1$ y $C_2$. Como $D$ contiene un "hoyo", es una región múltiplemente conexa.
+
+El Teorema de Green establece que, para una región $D$ acotada por una curva cerrada $C$ orientada positivamente (en sentido contrario a las manecillas del reloj), la integral de línea es igual a una integral doble sobre $D$:
+
+$$\oint_C \mathbf{F} \cdot d\mathbf{r} = \iint_D \left( \frac{\partial g}{\partial x} - \frac{\partial f}{\partial y} \right) dA$$
+
+Para una región múltiplemente conexa como $D$, la frontera $C$ se orienta positivamente si la curva exterior $C_1$ se recorre en contra de las manecillas del reloj y la curva interior $C_2$ se recorre en sentido a favor de las manecillas del reloj, de modo que la región $D$ siempre quede a la izquierda.
+
+
+Calculamos las derivadas parciales de $f$ y $g$:
+
+$$\frac{\partial f}{\partial y} = \frac{\partial}{\partial y} (e^{-x} + 3y) = 3$$
+$$\frac{\partial g}{\partial x} = \frac{\partial}{\partial x} (x) = 1$$
+
+El integrando de Green es:
+$$\frac{\partial g}{\partial x} - \frac{\partial f}{\partial y} = 1 - 3 = -2$$
+
+La integral de línea se convierte en:
+
+$$\oint_C \mathbf{F} \cdot d\mathbf{r} = \iint_D (-2)\, dA = -2 \iint_D \, dA $$
+
+Notemos que el área es el área del círculo grande $C_1$ menos el área del círculo pequeño $C_2$, por lo que 
+
+$$\oint_C \mathbf{F} \cdot d\mathbf{r} = -2 \iint_D dA = -2 \left[\pi (4)^2 - \pi(2)^2\right]$$
+$$\oint_C \mathbf{F} \cdot d\mathbf{r} = -24\pi$$
+
+Finalmente, nuestro cálculo de $\oint_C \mathbf{F} \cdot d\mathbf{r}$ utilizando el teorema de Green generalizado muestra que el área de la región es $-24\pi$.
